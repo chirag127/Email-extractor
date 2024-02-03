@@ -11,7 +11,7 @@
 
 # Email Extractor Functions
 
-## English 
+## English
 - (1) Extract emails from a single URL
 - (2) Extract emails from a URL (Two Levels) - Search on the page and all its URLs
 - (3) Do a Google search, save the Urls found and search the emails
@@ -51,7 +51,7 @@ Docker and docker-compose are required.
 
 In order to use docker follow below instructions:
 
-### Installation 
+### Installation
 
 1. Get an .env file
 
@@ -84,3 +84,20 @@ To get the file saved, for instance, as "out":
 ```
 ocker cp email-extractor:out.txt .
 ```
+
+
+
+all commands are executed from the root of the project.
+
+```
+cp .env.example .env
+docker-compose up -d --build
+docker exec -ti email-extractor python EmailExtractor.py
+docker cp email-extractor:Emails.db .
+docker cp email-extractor:out.txt .
+```
+
+# Author
+
+- Diego Caraballo
+- Email:
